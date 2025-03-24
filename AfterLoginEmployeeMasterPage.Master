@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AfterLoginEmployeeMasterPage.master.cs" Inherits="CRM_Final_Project.AfterLoginEmployeeMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>    
+    
+    <style type="text/css">
+        .bg {
+            background-color:InfoBackground;
+        }        
+        .auto-style1 {
+            width: 160px;
+        }
+        .auto-style3 {
+            width: 727px;
+        }
+          .bot {
+            text-align:center;
+            background-color:darkcyan;
+            color:white;
+
+        }
+        .mid {
+            background-color:black;
+            color:white;
+        }
+        ul {
+            list-style-type:none;
+        }
+        form{
+            font-family: "Times New Roman", Times, serif;
+        }
+        #MyButton{
+            -webkit-box-shadow: -5px 2px 62px 9px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 2px 62px 9px rgba(0,0,0,0.75);
+box-shadow: -5px 2px 62px 9px rgba(0,0,0,0.75);
+
+        }
+       
+        .auto-style4 {
+            width: 160px;
+            color: #0033CC;
+        }
+       
+        .fa {
+            font-size: large;
+        }
+        .fa-1x {
+            font-size: x-large;
+        }
+       
+    </style>
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                  <div>
+        <div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#"> CRM.JYOTIINDUSTRY.COM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="AfterLoginEmployee.aspx">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Indexpage.aspx"> About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Feedback.aspx"> Feedback Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ChangePasswordForemployee.aspx"> Change Password</a>
+      </li>
+      <li class="nav-item" id="MyButton">
+        <button class="btn btn-info"> Get Started </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+  </div>
+   
+    <div>
+           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="Image/crm2.jpg" class="d-block w-100" alt="..." height="200"/>
+    </div>
+    <div class="carousel-item">
+      <img src="Image/crm.jpg" class="d-block w-100" alt="..." height="200"/>
+    </div>
+    <div class="carousel-item">
+      <img src="Image/crm1.jpg" class="d-block w-100" alt="..." height="200"/>
+    </div>
+  </div>
+</div>
+        </div>
+        </div>
+        <div>
+            
+            <table class="w-100">
+                <tr>
+                    <td class="auto-style1">
+                        <a href="AfterLoginEmployee.aspx"><i class="fa fa-bars" aria-hidden="true"  ></i></a></td>
+                    <td class="auto-style4"><em><strong>Welcome</strong></em></td>
+                    <td class="auto-style3">
+                        <asp:Label ID="Label1" runat="server" Text="Guest" style="color: #0000CC; font-weight: 700; font-style: italic"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"  >LogOut</asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>        
+       
+              <div  class="bot">                                              
+            
+                <hr class="w-100 mx-bold "  />                
+                Copyright &copy; All Right Rserverd 2022 : CRM.JYOTIINDUSTY.COM  
+                   <hr class="w-50 mx-bold" style="background-color:white"  />  
+                  <i class="fa fa-phone" aria-hidden="true"> Contact Us:91+8076547590</i><br />
+                  <i class="fa fa-envelope" aria-hidden="true"><a href="Feedback.aspx" style="color: #FFFFFF"> Feedback</a></i><br />                  
+                  </div>   
+       
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    </form>
+</body>
+</html>

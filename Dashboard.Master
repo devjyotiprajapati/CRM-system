@@ -1,0 +1,280 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="CRM_Final_Project.Dashboard" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <meta charset="utf-8">
+        <title>Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+        <meta content="Coderthemes" name="author">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- third party css -->
+        <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+        <!-- third party css end -->
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+        <%--<link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css">--%>
+        <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    </asp:ContentPlaceHolder>
+</head>
+<body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+    <div class="wrapper">
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="leftside-menu">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo text-center logo-light">
+                <span class="logo-lg">
+                    <img src="Image/LoginMan.jpg" alt="" height="50">
+                    <%--<i class="fa fa-" aria-hidden="true"></i>--%>
+                </span>
+                <span class="logo-sm">
+                    <img src="Image/LoginMan.jpg" alt="" height="50">
+                </span>
+            </a>
+
+           
+            <div class="h-100" id="leftside-menu-container" data-simplebar="" >
+
+                <!--- Sidemenu -->
+                <ul class="side-nav">
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                            <i class="uil-home-alt"></i>
+                            <span>Dashboards </span>
+                        </a>
+
+
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                                <i class="fa fa-product-hunt"></i>
+                                <span>Product</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarEcommerce">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="Product.aspx">Products To Be Come...</a>
+                                    </li>
+                                    
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                            <i class="fa fa-question-circle"></i>
+                            <span>Query </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarEmail">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="PredefinedQueryandAnswer.aspx">Pre defined Query</a>
+                                </li>
+                                <li>
+                                    <a href="PredefinedQueryandAanswer.aspx">Query Type</a>
+                                </li>
+                                <li>
+                                    <a href="SearchQueryStatus.aspx">Query Status</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Complaint </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarProjects">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="Complaint.aspx">Complaint</a>
+                                </li>
+                                <li>
+                                    <a href="SearchComplaintStatus.aspx">Search Complaint Status</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                            <i class="uil-copy-alt"></i>
+                            <span>Authentication </span>
+                        </a>
+                 <div class="collapse" >
+ 
+                        <ul class="side-nav-second-level">
+                                                      
+                            <li>
+                                <a href="ChangepasswordforCustomer.aspx">Change Password</a>
+                            </li>
+                            <li>
+                                <a href="ForgetPassword.aspx">Forget Password </a>
+                            </li>
+                            <li>
+                                <a href="AfterloginHomePage.aspx">Starter Page</a>
+                            </li>
+                             <li>
+                                <a href="Feedback.aspx">Feedback</a>
+                            </li>
+                            <li>
+                                <a href="Help.aspx">Help me</a>
+                            </li>
+
+                        </ul>
+                     </div>
+                    </li>
+                    </div>
+
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
+                            <i class="uil-chart"></i>
+                            <span>Charts </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+
+                    </li>
+
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+            <
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="end-bar">
+
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="end-bar-toggle float-end">
+                <i class="dripicons-cross noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <div class="rightbar-content h-100" data-simplebar="">
+
+            <div class="p-3">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong>the overall color scheme, sidebar menu, etc.
+                   
+                </div>
+
+                <!-- Settings -->
+                <h5 class="mt-3">Color Scheme</h5>
+                <hr class="mt-1">
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+                    <label class="form-check-label" for="light-mode-check">Light Mode</label>
+                </div>
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                    <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
+                </div>
+
+
+                <!-- Width -->
+                <h5 class="mt-4">Width</h5>
+                <hr class="mt-1">
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="width" value="fluid" id="fluid-check" checked="">
+                    <label class="form-check-label" for="fluid-check">Fluid</label>
+                </div>
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="width" value="boxed" id="boxed-check">
+                    <label class="form-check-label" for="boxed-check">Boxed</label>
+                </div>
+
+
+                <!-- Left Sidebar-->
+                <h5 class="mt-4">Left Sidebar</h5>
+                <hr class="mt-1">
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="theme" value="default" id="default-check">
+                    <label class="form-check-label" for="default-check">Default</label>
+                </div>
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="theme" value="light" id="light-check" checked="">
+                    <label class="form-check-label" for="light-check">Light</label>
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" type="checkbox" name="theme" value="dark" id="dark-check">
+                    <label class="form-check-label" for="dark-check">Dark</label>
+                </div>
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="compact" value="fixed" id="fixed-check" checked="">
+                    <label class="form-check-label" for="fixed-check">Fixed</label>
+                </div>
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="compact" value="condensed" id="condensed-check">
+                    <label class="form-check-label" for="condensed-check">Condensed</label>
+                </div>
+
+                <div class="form-check form-switch mb-1">
+                    <input class="form-check-input" type="checkbox" name="compact" value="scrollable" id="scrollable-check">
+                    <label class="form-check-label" for="scrollable-check">Scrollable</label>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
+
+                    
+                </div>
+            </div>
+            <!-- end padding-->
+
+        </div>
+    </div>
+
+    <div class="rightbar-overlay"></div>
+    <!-- /End-bar -->
+
+    <!-- bundle -->
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- third party js -->
+    <script src="assets/js/vendor/apexcharts.min.js"></script>
+    <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- third party js ends -->
+
+    <!-- demo app -->
+    <script src="assets/js/pages/demo.dashboard.js"></script>
+    <!-- end demo js-->
+</body>
+</html>

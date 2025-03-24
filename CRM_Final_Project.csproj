@@ -1,0 +1,971 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6A5DA46-7DA1-42B4-81D8-FE168869566B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRM_Final_Project</RootNamespace>
+    <AssemblyName>CRM_Final_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44368</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddEmployee.aspx" />
+    <Content Include="Admin\Addnewproduct.aspx" />
+    <Content Include="Admin\AdminChangePassword.aspx" />
+    <Content Include="Admin\AdminForgetpassword.aspx" />
+    <Content Include="Admin\AdminHomeAfterLogin.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\assets\css\app-dark.min.css" />
+    <Content Include="Admin\assets\css\app.min.css" />
+    <Content Include="Admin\assets\css\icons.min.css" />
+    <Content Include="Admin\assets\css\vendor\32px.png" />
+    <Content Include="Admin\assets\css\vendor\britecharts.min.css" />
+    <Content Include="Admin\assets\css\vendor\buttons.bootstrap5.css" />
+    <Content Include="Admin\assets\css\vendor\dataTables.bootstrap5.css" />
+    <Content Include="Admin\assets\css\vendor\frappe-gantt.css" />
+    <Content Include="Admin\assets\css\vendor\fullcalendar.min.css" />
+    <Content Include="Admin\assets\css\vendor\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Admin\assets\css\vendor\jstree.min.css" />
+    <Content Include="Admin\assets\css\vendor\quill.bubble.css" />
+    <Content Include="Admin\assets\css\vendor\quill.core.css" />
+    <Content Include="Admin\assets\css\vendor\quill.snow.css" />
+    <Content Include="Admin\assets\css\vendor\responsive.bootstrap5.css" />
+    <Content Include="Admin\assets\css\vendor\select.bootstrap5.css" />
+    <Content Include="Admin\assets\css\vendor\simplemde.min.css" />
+    <Content Include="Admin\assets\css\vendor\throbber.gif" />
+    <Content Include="Admin\assets\fonts\dripicons-v2.svg" />
+    <Content Include="Admin\assets\fonts\Nunito-Bold.svg" />
+    <Content Include="Admin\assets\fonts\Nunito-Light.svg" />
+    <Content Include="Admin\assets\fonts\Nunito-Regular.svg" />
+    <Content Include="Admin\assets\fonts\Nunito-SemiBold.svg" />
+    <Content Include="Admin\assets\fonts\unicons.svg" />
+    <Content Include="Admin\assets\images\barcode.png" />
+    <Content Include="Admin\assets\images\bg-auth.jpg" />
+    <Content Include="Admin\assets\images\bg-pattern-dark.png" />
+    <Content Include="Admin\assets\images\bg-pattern-light.svg" />
+    <Content Include="Admin\assets\images\bg-pattern.png" />
+    <Content Include="Admin\assets\images\brands\bitbucket.png" />
+    <Content Include="Admin\assets\images\brands\dribbble.png" />
+    <Content Include="Admin\assets\images\brands\dropbox.png" />
+    <Content Include="Admin\assets\images\brands\g-suite.png" />
+    <Content Include="Admin\assets\images\brands\github.png" />
+    <Content Include="Admin\assets\images\brands\slack.png" />
+    <Content Include="Admin\assets\images\email-campaign.svg" />
+    <Content Include="Admin\assets\images\favicon.ico" />
+    <Content Include="Admin\assets\images\features-1.svg" />
+    <Content Include="Admin\assets\images\features-2.svg" />
+    <Content Include="Admin\assets\images\file-searching.svg" />
+    <Content Include="Admin\assets\images\flags\germany.jpg" />
+    <Content Include="Admin\assets\images\flags\italy.jpg" />
+    <Content Include="Admin\assets\images\flags\russia.jpg" />
+    <Content Include="Admin\assets\images\flags\spain.jpg" />
+    <Content Include="Admin\assets\images\flags\us.jpg" />
+    <Content Include="Admin\assets\images\help-icon.svg" />
+    <Content Include="Admin\assets\images\layouts\layout-1.png" />
+    <Content Include="Admin\assets\images\layouts\layout-2.png" />
+    <Content Include="Admin\assets\images\layouts\layout-3.png" />
+    <Content Include="Admin\assets\images\layouts\layout-4.png" />
+    <Content Include="Admin\assets\images\layouts\layout-5.png" />
+    <Content Include="Admin\assets\images\layouts\layout-6.png" />
+    <Content Include="Admin\assets\images\logo-dark.png" />
+    <Content Include="Admin\assets\images\logo-light.png" />
+    <Content Include="Admin\assets\images\logo.png" />
+    <Content Include="Admin\assets\images\logo_sm.png" />
+    <Content Include="Admin\assets\images\logo_sm_dark.png" />
+    <Content Include="Admin\assets\images\mail_sent.svg" />
+    <Content Include="Admin\assets\images\maintenance.svg" />
+    <Content Include="Admin\assets\images\payments\cod.png" />
+    <Content Include="Admin\assets\images\payments\discover.png" />
+    <Content Include="Admin\assets\images\payments\master.png" />
+    <Content Include="Admin\assets\images\payments\payoneer.png" />
+    <Content Include="Admin\assets\images\payments\paypal.png" />
+    <Content Include="Admin\assets\images\payments\stripe.png" />
+    <Content Include="Admin\assets\images\payments\visa.png" />
+    <Content Include="Admin\assets\images\products\product-1.jpg" />
+    <Content Include="Admin\assets\images\products\product-2.jpg" />
+    <Content Include="Admin\assets\images\products\product-3.jpg" />
+    <Content Include="Admin\assets\images\products\product-4.jpg" />
+    <Content Include="Admin\assets\images\products\product-5.jpg" />
+    <Content Include="Admin\assets\images\products\product-6.jpg" />
+    <Content Include="Admin\assets\images\projects\project-1.jpg" />
+    <Content Include="Admin\assets\images\projects\project-2.jpg" />
+    <Content Include="Admin\assets\images\projects\project-3.jpg" />
+    <Content Include="Admin\assets\images\projects\project-4.jpg" />
+    <Content Include="Admin\assets\images\report.svg" />
+    <Content Include="Admin\assets\images\small\small-1.jpg" />
+    <Content Include="Admin\assets\images\small\small-2.jpg" />
+    <Content Include="Admin\assets\images\small\small-3.jpg" />
+    <Content Include="Admin\assets\images\small\small-4.jpg" />
+    <Content Include="Admin\assets\images\startman.svg" />
+    <Content Include="Admin\assets\images\startup.svg" />
+    <Content Include="Admin\assets\images\users\avatar-1.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-10.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-2.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-3.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-4.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-5.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-6.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-7.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-8.jpg" />
+    <Content Include="Admin\assets\images\users\avatar-9.jpg" />
+    <Content Include="Admin\assets\images\waves.png" />
+    <Content Include="Admin\assets\js\app.min.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-area.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-bar.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-bubble.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-candlestick.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-column.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-heatmap.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-line.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-mixed.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-pie.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-radar.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-radialbar.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-scatter.js" />
+    <Content Include="Admin\assets\js\pages\demo.apex-sparklines.js" />
+    <Content Include="Admin\assets\js\pages\demo.britechart.js" />
+    <Content Include="Admin\assets\js\pages\demo.calendar.js" />
+    <Content Include="Admin\assets\js\pages\demo.chartjs.js" />
+    <Content Include="Admin\assets\js\pages\demo.customers.js" />
+    <Content Include="Admin\assets\js\pages\demo.dashboard-analytics.js" />
+    <Content Include="Admin\assets\js\pages\demo.dashboard-crm.js" />
+    <Content Include="Admin\assets\js\pages\demo.dashboard-projects.js" />
+    <Content Include="Admin\assets\js\pages\demo.dashboard.js" />
+    <Content Include="Admin\assets\js\pages\demo.datatable-init.js" />
+    <Content Include="Admin\assets\js\pages\demo.form-wizard.js" />
+    <Content Include="Admin\assets\js\pages\demo.google-maps.js" />
+    <Content Include="Admin\assets\js\pages\demo.inbox.js" />
+    <Content Include="Admin\assets\js\pages\demo.jstree.js" />
+    <Content Include="Admin\assets\js\pages\demo.materialdesignicons.js" />
+    <Content Include="Admin\assets\js\pages\demo.products.js" />
+    <Content Include="Admin\assets\js\pages\demo.profile.js" />
+    <Content Include="Admin\assets\js\pages\demo.project-detail.js" />
+    <Content Include="Admin\assets\js\pages\demo.project-gantt.js" />
+    <Content Include="Admin\assets\js\pages\demo.quilljs.js" />
+    <Content Include="Admin\assets\js\pages\demo.sellers.js" />
+    <Content Include="Admin\assets\js\pages\demo.simplemde.js" />
+    <Content Include="Admin\assets\js\pages\demo.sparkline.js" />
+    <Content Include="Admin\assets\js\pages\demo.tasks.js" />
+    <Content Include="Admin\assets\js\pages\demo.timepicker.js" />
+    <Content Include="Admin\assets\js\pages\demo.toastr.js" />
+    <Content Include="Admin\assets\js\pages\demo.typehead.js" />
+    <Content Include="Admin\assets\js\pages\demo.vector-maps.js" />
+    <Content Include="Admin\assets\js\pages\demo.widgets.js" />
+    <Content Include="Admin\assets\js\ui\component.chat.js" />
+    <Content Include="Admin\assets\js\ui\component.dragula.js" />
+    <Content Include="Admin\assets\js\ui\component.fileupload.js" />
+    <Content Include="Admin\assets\js\ui\component.range-slider.js" />
+    <Content Include="Admin\assets\js\ui\component.rating.js" />
+    <Content Include="Admin\assets\js\ui\component.todo.js" />
+    <Content Include="Admin\assets\js\vendor.min.js" />
+    <Content Include="Admin\assets\js\vendor\apexcharts.min.js" />
+    <Content Include="Admin\assets\js\vendor\britecharts.min.js" />
+    <Content Include="Admin\assets\js\vendor\buttons.bootstrap5.min.js" />
+    <Content Include="Admin\assets\js\vendor\buttons.flash.min.js" />
+    <Content Include="Admin\assets\js\vendor\buttons.html5.min.js" />
+    <Content Include="Admin\assets\js\vendor\buttons.print.min.js" />
+    <Content Include="Admin\assets\js\vendor\Chart.bundle.min.js" />
+    <Content Include="Admin\assets\js\vendor\d3.min.js" />
+    <Content Include="Admin\assets\js\vendor\dataTables.bootstrap5.js" />
+    <Content Include="Admin\assets\js\vendor\dataTables.buttons.min.js" />
+    <Content Include="Admin\assets\js\vendor\dataTables.checkboxes.min.js" />
+    <Content Include="Admin\assets\js\vendor\dataTables.keyTable.min.js" />
+    <Content Include="Admin\assets\js\vendor\dataTables.responsive.min.js" />
+    <Content Include="Admin\assets\js\vendor\dataTables.select.min.js" />
+    <Content Include="Admin\assets\js\vendor\dragula.min.js" />
+    <Content Include="Admin\assets\js\vendor\dropzone.min.js" />
+    <Content Include="Admin\assets\js\vendor\frappe-gantt.min.js" />
+    <Content Include="Admin\assets\js\vendor\fullcalendar.min.js" />
+    <Content Include="Admin\assets\js\vendor\gmaps.min.js" />
+    <Content Include="Admin\assets\js\vendor\handlebars.min.js" />
+    <Content Include="Admin\assets\js\vendor\ion.rangeSlider.min.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-au-mill-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-ca-lcc-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-es-merc.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-es-mill.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-europe-mill-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-fr-merc-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-in-mill-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-us-il-chicago-mill-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-us-merc-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Admin\assets\js\vendor\jquery.dataTables.min.js" />
+    <Content Include="Admin\assets\js\vendor\jquery.rateit.min.js" />
+    <Content Include="Admin\assets\js\vendor\jquery.sparkline.min.js" />
+    <Content Include="Admin\assets\js\vendor\jstree.min.js" />
+    <Content Include="Admin\assets\js\vendor\quill.min.js" />
+    <Content Include="Admin\assets\js\vendor\responsive.bootstrap5.min.js" />
+    <Content Include="Admin\assets\js\vendor\simplemde.min.js" />
+    <Content Include="Admin\assets\js\vendor\typeahead.bundle.min.js" />
+    <Content Include="Admin\ManageComplaint.aspx" />
+    <Content Include="Admin\ManageCustomer.aspx" />
+    <Content Include="Admin\ManageEmployee.aspx" />
+    <Content Include="Admin\ManagePoCustQuery.aspx" />
+    <Content Include="Admin\ManageProduct.aspx" />
+    <Content Include="Admin\ManageQuery.aspx" />
+    <Content Include="Admin\MyProfileAdmin.aspx" />
+    <Content Include="AfterLoginEmployee.aspx" />
+    <Content Include="AllPoCustQuery.aspx" />
+    <Content Include="AllQuery.aspx" />
+    <Content Include="assets\css\app-dark.min.css" />
+    <Content Include="assets\css\app.min.css" />
+    <Content Include="assets\css\icons.min.css" />
+    <Content Include="assets\css\vendor\32px.png" />
+    <Content Include="assets\css\vendor\britecharts.min.css" />
+    <Content Include="assets\css\vendor\buttons.bootstrap5.css" />
+    <Content Include="assets\css\vendor\dataTables.bootstrap5.css" />
+    <Content Include="assets\css\vendor\frappe-gantt.css" />
+    <Content Include="assets\css\vendor\fullcalendar.min.css" />
+    <Content Include="assets\css\vendor\jquery-jvectormap-1.2.2.css" />
+    <Content Include="assets\css\vendor\jstree.min.css" />
+    <Content Include="assets\css\vendor\quill.bubble.css" />
+    <Content Include="assets\css\vendor\quill.core.css" />
+    <Content Include="assets\css\vendor\quill.snow.css" />
+    <Content Include="assets\css\vendor\responsive.bootstrap5.css" />
+    <Content Include="assets\css\vendor\select.bootstrap5.css" />
+    <Content Include="assets\css\vendor\simplemde.min.css" />
+    <Content Include="assets\css\vendor\throbber.gif" />
+    <Content Include="assets\fonts\dripicons-v2.svg" />
+    <Content Include="assets\fonts\Nunito-Bold.svg" />
+    <Content Include="assets\fonts\Nunito-Light.svg" />
+    <Content Include="assets\fonts\Nunito-Regular.svg" />
+    <Content Include="assets\fonts\Nunito-SemiBold.svg" />
+    <Content Include="assets\fonts\unicons.svg" />
+    <Content Include="assets\images\barcode.png" />
+    <Content Include="assets\images\bg-auth.jpg" />
+    <Content Include="assets\images\bg-pattern-dark.png" />
+    <Content Include="assets\images\bg-pattern-light.svg" />
+    <Content Include="assets\images\bg-pattern.png" />
+    <Content Include="assets\images\brands\bitbucket.png" />
+    <Content Include="assets\images\brands\dribbble.png" />
+    <Content Include="assets\images\brands\dropbox.png" />
+    <Content Include="assets\images\brands\g-suite.png" />
+    <Content Include="assets\images\brands\github.png" />
+    <Content Include="assets\images\brands\slack.png" />
+    <Content Include="assets\images\email-campaign.svg" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\features-1.svg" />
+    <Content Include="assets\images\features-2.svg" />
+    <Content Include="assets\images\file-searching.svg" />
+    <Content Include="assets\images\flags\germany.jpg" />
+    <Content Include="assets\images\flags\italy.jpg" />
+    <Content Include="assets\images\flags\russia.jpg" />
+    <Content Include="assets\images\flags\spain.jpg" />
+    <Content Include="assets\images\flags\us.jpg" />
+    <Content Include="assets\images\help-icon.svg" />
+    <Content Include="assets\images\layouts\layout-1.png" />
+    <Content Include="assets\images\layouts\layout-2.png" />
+    <Content Include="assets\images\layouts\layout-3.png" />
+    <Content Include="assets\images\layouts\layout-4.png" />
+    <Content Include="assets\images\layouts\layout-5.png" />
+    <Content Include="assets\images\layouts\layout-6.png" />
+    <Content Include="assets\images\logo-dark.png" />
+    <Content Include="assets\images\logo-light.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logo_sm.png" />
+    <Content Include="assets\images\logo_sm_dark.png" />
+    <Content Include="assets\images\mail_sent.svg" />
+    <Content Include="assets\images\maintenance.svg" />
+    <Content Include="assets\images\payments\cod.png" />
+    <Content Include="assets\images\payments\discover.png" />
+    <Content Include="assets\images\payments\master.png" />
+    <Content Include="assets\images\payments\payoneer.png" />
+    <Content Include="assets\images\payments\paypal.png" />
+    <Content Include="assets\images\payments\stripe.png" />
+    <Content Include="assets\images\payments\visa.png" />
+    <Content Include="assets\images\products\product-1.jpg" />
+    <Content Include="assets\images\products\product-2.jpg" />
+    <Content Include="assets\images\products\product-3.jpg" />
+    <Content Include="assets\images\products\product-4.jpg" />
+    <Content Include="assets\images\products\product-5.jpg" />
+    <Content Include="assets\images\products\product-6.jpg" />
+    <Content Include="assets\images\projects\project-1.jpg" />
+    <Content Include="assets\images\projects\project-2.jpg" />
+    <Content Include="assets\images\projects\project-3.jpg" />
+    <Content Include="assets\images\projects\project-4.jpg" />
+    <Content Include="assets\images\report.svg" />
+    <Content Include="assets\images\small\small-1.jpg" />
+    <Content Include="assets\images\small\small-2.jpg" />
+    <Content Include="assets\images\small\small-3.jpg" />
+    <Content Include="assets\images\small\small-4.jpg" />
+    <Content Include="assets\images\startman.svg" />
+    <Content Include="assets\images\startup.svg" />
+    <Content Include="assets\images\users\avatar-1.jpg" />
+    <Content Include="assets\images\users\avatar-10.jpg" />
+    <Content Include="assets\images\users\avatar-2.jpg" />
+    <Content Include="assets\images\users\avatar-3.jpg" />
+    <Content Include="assets\images\users\avatar-4.jpg" />
+    <Content Include="assets\images\users\avatar-5.jpg" />
+    <Content Include="assets\images\users\avatar-6.jpg" />
+    <Content Include="assets\images\users\avatar-7.jpg" />
+    <Content Include="assets\images\users\avatar-8.jpg" />
+    <Content Include="assets\images\users\avatar-9.jpg" />
+    <Content Include="assets\images\waves.png" />
+    <Content Include="assets\js\app.min.js" />
+    <Content Include="assets\js\pages\demo.apex-area.js" />
+    <Content Include="assets\js\pages\demo.apex-bar.js" />
+    <Content Include="assets\js\pages\demo.apex-bubble.js" />
+    <Content Include="assets\js\pages\demo.apex-candlestick.js" />
+    <Content Include="assets\js\pages\demo.apex-column.js" />
+    <Content Include="assets\js\pages\demo.apex-heatmap.js" />
+    <Content Include="assets\js\pages\demo.apex-line.js" />
+    <Content Include="assets\js\pages\demo.apex-mixed.js" />
+    <Content Include="assets\js\pages\demo.apex-pie.js" />
+    <Content Include="assets\js\pages\demo.apex-radar.js" />
+    <Content Include="assets\js\pages\demo.apex-radialbar.js" />
+    <Content Include="assets\js\pages\demo.apex-scatter.js" />
+    <Content Include="assets\js\pages\demo.apex-sparklines.js" />
+    <Content Include="assets\js\pages\demo.britechart.js" />
+    <Content Include="assets\js\pages\demo.calendar.js" />
+    <Content Include="assets\js\pages\demo.chartjs.js" />
+    <Content Include="assets\js\pages\demo.customers.js" />
+    <Content Include="assets\js\pages\demo.dashboard-analytics.js" />
+    <Content Include="assets\js\pages\demo.dashboard-crm.js" />
+    <Content Include="assets\js\pages\demo.dashboard-projects.js" />
+    <Content Include="assets\js\pages\demo.dashboard.js" />
+    <Content Include="assets\js\pages\demo.datatable-init.js" />
+    <Content Include="assets\js\pages\demo.form-wizard.js" />
+    <Content Include="assets\js\pages\demo.google-maps.js" />
+    <Content Include="assets\js\pages\demo.inbox.js" />
+    <Content Include="assets\js\pages\demo.jstree.js" />
+    <Content Include="assets\js\pages\demo.materialdesignicons.js" />
+    <Content Include="assets\js\pages\demo.products.js" />
+    <Content Include="assets\js\pages\demo.profile.js" />
+    <Content Include="assets\js\pages\demo.project-detail.js" />
+    <Content Include="assets\js\pages\demo.project-gantt.js" />
+    <Content Include="assets\js\pages\demo.quilljs.js" />
+    <Content Include="assets\js\pages\demo.sellers.js" />
+    <Content Include="assets\js\pages\demo.simplemde.js" />
+    <Content Include="assets\js\pages\demo.sparkline.js" />
+    <Content Include="assets\js\pages\demo.tasks.js" />
+    <Content Include="assets\js\pages\demo.timepicker.js" />
+    <Content Include="assets\js\pages\demo.toastr.js" />
+    <Content Include="assets\js\pages\demo.typehead.js" />
+    <Content Include="assets\js\pages\demo.vector-maps.js" />
+    <Content Include="assets\js\pages\demo.widgets.js" />
+    <Content Include="assets\js\ui\component.chat.js" />
+    <Content Include="assets\js\ui\component.dragula.js" />
+    <Content Include="assets\js\ui\component.fileupload.js" />
+    <Content Include="assets\js\ui\component.range-slider.js" />
+    <Content Include="assets\js\ui\component.rating.js" />
+    <Content Include="assets\js\ui\component.todo.js" />
+    <Content Include="assets\js\vendor.min.js" />
+    <Content Include="assets\js\vendor\apexcharts.min.js" />
+    <Content Include="assets\js\vendor\britecharts.min.js" />
+    <Content Include="assets\js\vendor\buttons.bootstrap5.min.js" />
+    <Content Include="assets\js\vendor\buttons.flash.min.js" />
+    <Content Include="assets\js\vendor\buttons.html5.min.js" />
+    <Content Include="assets\js\vendor\buttons.print.min.js" />
+    <Content Include="assets\js\vendor\Chart.bundle.min.js" />
+    <Content Include="assets\js\vendor\d3.min.js" />
+    <Content Include="assets\js\vendor\dataTables.bootstrap5.js" />
+    <Content Include="assets\js\vendor\dataTables.buttons.min.js" />
+    <Content Include="assets\js\vendor\dataTables.checkboxes.min.js" />
+    <Content Include="assets\js\vendor\dataTables.keyTable.min.js" />
+    <Content Include="assets\js\vendor\dataTables.responsive.min.js" />
+    <Content Include="assets\js\vendor\dataTables.select.min.js" />
+    <Content Include="assets\js\vendor\dragula.min.js" />
+    <Content Include="assets\js\vendor\dropzone.min.js" />
+    <Content Include="assets\js\vendor\frappe-gantt.min.js" />
+    <Content Include="assets\js\vendor\fullcalendar.min.js" />
+    <Content Include="assets\js\vendor\gmaps.min.js" />
+    <Content Include="assets\js\vendor\handlebars.min.js" />
+    <Content Include="assets\js\vendor\ion.rangeSlider.min.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-au-mill-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-ca-lcc-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-es-merc.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-es-mill.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-europe-mill-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-fr-merc-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-in-mill-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-us-il-chicago-mill-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-us-merc-en.js" />
+    <Content Include="assets\js\vendor\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="assets\js\vendor\jquery.dataTables.min.js" />
+    <Content Include="assets\js\vendor\jquery.rateit.min.js" />
+    <Content Include="assets\js\vendor\jquery.sparkline.min.js" />
+    <Content Include="assets\js\vendor\jstree.min.js" />
+    <Content Include="assets\js\vendor\quill.min.js" />
+    <Content Include="assets\js\vendor\responsive.bootstrap5.min.js" />
+    <Content Include="assets\js\vendor\simplemde.min.js" />
+    <Content Include="assets\js\vendor\typeahead.bundle.min.js" />
+    <Content Include="ChangepasswordforCustomer.aspx" />
+    <Content Include="ChangePasswordForemployee.aspx" />
+    <Content Include="Complaint.aspx" />
+    <Content Include="CustomerLogin.aspx" />
+    <Content Include="CustomerQuery.aspx" />
+    <Content Include="EmployeeLogin.aspx" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="ForgetPassword.aspx" />
+    <Content Include="ForgetPasswordForEmployee.aspx" />
+    <Content Include="Help.aspx" />
+    <Content Include="Image\Aboutus.jpg" />
+    <Content Include="Image\change-password.jpg" />
+    <Content Include="Image\changepassword2.jpg" />
+    <Content Include="Image\crm.jpg" />
+    <Content Include="Image\crm1.jpg" />
+    <Content Include="Image\crm2.jpg" />
+    <Content Include="Image\crmbanner1.jpg" />
+    <Content Include="Image\crmbanner2.jpg" />
+    <Content Include="Image\crmbanner3.jpg" />
+    <Content Include="Image\feedback.png" />
+    <Content Include="Image\forgetpassword.jpg" />
+    <Content Include="Image\help.jpg" />
+    <Content Include="Image\j1.jpg" />
+    <Content Include="Image\j2.jpg" />
+    <Content Include="Image\j4.jpg" />
+    <Content Include="Image\leaves.jpg" />
+    <Content Include="Image\Login.jpg" />
+    <Content Include="Image\login2.png" />
+    <Content Include="Image\loginback.jpg" />
+    <Content Include="Image\LoginMan.jpg" />
+    <Content Include="Image\nk.jpg" />
+    <Content Include="Image\nk1.jpg" />
+    <Content Include="Image\signup.png" />
+    <Content Include="Image\signup1.jpg" />
+    <Content Include="Indexpage.aspx" />
+    <Content Include="JavaScript.js" />
+    <Content Include="MyProfileForCustomer.aspx" />
+    <Content Include="MyProfileForEmployee.aspx" />
+    <Content Include="Newsignup.aspx" />
+    <Content Include="PotentialCustQuery.aspx" />
+    <Content Include="PredefinedQueryandAnswer.aspx" />
+    <Content Include="Product.aspx" />
+    <Content Include="ProductView.aspx" />
+    <Content Include="ReplyOnComplaint.aspx" />
+    <Content Include="AllComplaint.aspx" />
+    <Content Include="ReplyonPoCustQuery.aspx" />
+    <Content Include="ReplyOnQuery.aspx" />
+    <Content Include="SearchAllComplaintStatus.aspx" />
+    <Content Include="SearchComplaintStatus.aspx" />
+    <Content Include="SearchQueryStatus.aspx" />
+    <Content Include="StyleSheetFile.css" />
+    <Content Include="Web.config" />
+    <Content Include="AfterloginHomePage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddEmployee.aspx.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddEmployee.aspx.designer.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Addnewproduct.aspx.cs">
+      <DependentUpon>Addnewproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Addnewproduct.aspx.designer.cs">
+      <DependentUpon>Addnewproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.designer.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminForgetpassword.aspx.cs">
+      <DependentUpon>AdminForgetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForgetpassword.aspx.designer.cs">
+      <DependentUpon>AdminForgetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHomeAfterLogin.aspx.cs">
+      <DependentUpon>AdminHomeAfterLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHomeAfterLogin.aspx.designer.cs">
+      <DependentUpon>AdminHomeAfterLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Afterloginadmin.Master.cs">
+      <DependentUpon>Afterloginadmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Afterloginadmin.Master.designer.cs">
+      <DependentUpon>Afterloginadmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dashbordAdmin.Master.cs">
+      <DependentUpon>dashbordAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dashbordAdmin.Master.designer.cs">
+      <DependentUpon>dashbordAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageComplaint.aspx.cs">
+      <DependentUpon>ManageComplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageComplaint.aspx.designer.cs">
+      <DependentUpon>ManageComplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCustomer.aspx.cs">
+      <DependentUpon>ManageCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCustomer.aspx.designer.cs">
+      <DependentUpon>ManageCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageEmployee.aspx.cs">
+      <DependentUpon>ManageEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageEmployee.aspx.designer.cs">
+      <DependentUpon>ManageEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagePoCustQuery.aspx.cs">
+      <DependentUpon>ManagePoCustQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagePoCustQuery.aspx.designer.cs">
+      <DependentUpon>ManagePoCustQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageProduct.aspx.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageProduct.aspx.designer.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageQuery.aspx.cs">
+      <DependentUpon>ManageQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageQuery.aspx.designer.cs">
+      <DependentUpon>ManageQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MyProfileAdmin.aspx.cs">
+      <DependentUpon>MyProfileAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MyProfileAdmin.aspx.designer.cs">
+      <DependentUpon>MyProfileAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AfterLoginEmployee.aspx.cs">
+      <DependentUpon>AfterLoginEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterLoginEmployee.aspx.designer.cs">
+      <DependentUpon>AfterLoginEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AfterLoginEmployeeMasterPage.Master.cs">
+      <DependentUpon>AfterLoginEmployeeMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterLoginEmployeeMasterPage.Master.designer.cs">
+      <DependentUpon>AfterLoginEmployeeMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AfterLoginMaster.Master.cs">
+      <DependentUpon>AfterLoginMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterLoginMaster.Master.designer.cs">
+      <DependentUpon>AfterLoginMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AfterloginMasterPage.Master.cs">
+      <DependentUpon>AfterloginMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterloginMasterPage.Master.designer.cs">
+      <DependentUpon>AfterloginMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AllPoCustQuery.aspx.cs">
+      <DependentUpon>AllPoCustQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPoCustQuery.aspx.designer.cs">
+      <DependentUpon>AllPoCustQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllQuery.aspx.cs">
+      <DependentUpon>AllQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllQuery.aspx.designer.cs">
+      <DependentUpon>AllQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangepasswordforCustomer.aspx.cs">
+      <DependentUpon>ChangepasswordforCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangepasswordforCustomer.aspx.designer.cs">
+      <DependentUpon>ChangepasswordforCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForemployee.aspx.cs">
+      <DependentUpon>ChangePasswordForemployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForemployee.aspx.designer.cs">
+      <DependentUpon>ChangePasswordForemployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complaint.aspx.cs">
+      <DependentUpon>Complaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complaint.aspx.designer.cs">
+      <DependentUpon>Complaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.designer.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerQuery.aspx.cs">
+      <DependentUpon>CustomerQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerQuery.aspx.designer.cs">
+      <DependentUpon>CustomerQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.Master.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Master.designer.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard.Master.cs">
+      <DependentUpon>EmployeeDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard.Master.designer.cs">
+      <DependentUpon>EmployeeDashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLogin.aspx.cs">
+      <DependentUpon>EmployeeLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeLogin.aspx.designer.cs">
+      <DependentUpon>EmployeeLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPasswordForEmployee.aspx.cs">
+      <DependentUpon>ForgetPasswordForEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPasswordForEmployee.aspx.designer.cs">
+      <DependentUpon>ForgetPasswordForEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indexpage.aspx.cs">
+      <DependentUpon>Indexpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indexpage.aspx.designer.cs">
+      <DependentUpon>Indexpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfileForCustomer.aspx.cs">
+      <DependentUpon>MyProfileForCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfileForCustomer.aspx.designer.cs">
+      <DependentUpon>MyProfileForCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfileForEmployee.aspx.cs">
+      <DependentUpon>MyProfileForEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfileForEmployee.aspx.designer.cs">
+      <DependentUpon>MyProfileForEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Newsignup.aspx.cs">
+      <DependentUpon>Newsignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Newsignup.aspx.designer.cs">
+      <DependentUpon>Newsignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PotentialCustQuery.aspx.cs">
+      <DependentUpon>PotentialCustQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PotentialCustQuery.aspx.designer.cs">
+      <DependentUpon>PotentialCustQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PredefinedQueryandAnswer.aspx.cs">
+      <DependentUpon>PredefinedQueryandAnswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PredefinedQueryandAnswer.aspx.designer.cs">
+      <DependentUpon>PredefinedQueryandAnswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AfterloginHomePage.aspx.cs">
+      <DependentUpon>AfterloginHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterloginHomePage.aspx.designer.cs">
+      <DependentUpon>AfterloginHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReplyOnComplaint.aspx.cs">
+      <DependentUpon>ReplyOnComplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReplyOnComplaint.aspx.designer.cs">
+      <DependentUpon>ReplyOnComplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllComplaint.aspx.cs">
+      <DependentUpon>AllComplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllComplaint.aspx.designer.cs">
+      <DependentUpon>AllComplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReplyonPoCustQuery.aspx.cs">
+      <DependentUpon>ReplyonPoCustQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReplyonPoCustQuery.aspx.designer.cs">
+      <DependentUpon>ReplyonPoCustQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReplyOnQuery.aspx.cs">
+      <DependentUpon>ReplyOnQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReplyOnQuery.aspx.designer.cs">
+      <DependentUpon>ReplyOnQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAllComplaintStatus.aspx.cs">
+      <DependentUpon>SearchAllComplaintStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchAllComplaintStatus.aspx.designer.cs">
+      <DependentUpon>SearchAllComplaintStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchComplaintStatus.aspx.cs">
+      <DependentUpon>SearchComplaintStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchComplaintStatus.aspx.designer.cs">
+      <DependentUpon>SearchComplaintStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchQueryStatus.aspx.cs">
+      <DependentUpon>SearchQueryStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchQueryStatus.aspx.designer.cs">
+      <DependentUpon>SearchQueryStatus.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dashboard.Master" />
+    <Content Include="assets\fonts\dripicons-v2-1.eot" />
+    <Content Include="assets\fonts\dripicons-v2.eot" />
+    <Content Include="assets\fonts\dripicons-v2.ttf" />
+    <Content Include="assets\fonts\dripicons-v2.woff" />
+    <Content Include="assets\fonts\materialdesignicons-webfont-1.eot" />
+    <Content Include="assets\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="assets\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="assets\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="assets\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="assets\fonts\Nunito-Bold-1.eot" />
+    <Content Include="assets\fonts\Nunito-Bold.eot" />
+    <Content Include="assets\fonts\Nunito-Bold.ttf" />
+    <Content Include="assets\fonts\Nunito-Bold.woff" />
+    <Content Include="assets\fonts\Nunito-Light-1.eot" />
+    <Content Include="assets\fonts\Nunito-Light.eot" />
+    <Content Include="assets\fonts\Nunito-Light.ttf" />
+    <Content Include="assets\fonts\Nunito-Light.woff" />
+    <Content Include="assets\fonts\Nunito-Regular-1.eot" />
+    <Content Include="assets\fonts\Nunito-Regular.eot" />
+    <Content Include="assets\fonts\Nunito-Regular.ttf" />
+    <Content Include="assets\fonts\Nunito-Regular.woff" />
+    <Content Include="assets\fonts\Nunito-SemiBold-1.eot" />
+    <Content Include="assets\fonts\Nunito-SemiBold.eot" />
+    <Content Include="assets\fonts\Nunito-SemiBold.ttf" />
+    <Content Include="assets\fonts\Nunito-SemiBold.woff" />
+    <Content Include="assets\fonts\unicons.eot" />
+    <Content Include="assets\fonts\unicons.ttf" />
+    <Content Include="assets\fonts\unicons.woff" />
+    <Content Include="assets\fonts\unicons.woff2" />
+    <Content Include="AfterloginMasterPage.Master" />
+    <Content Include="AfterLoginMaster.Master" />
+    <Content Include="Admin\Afterloginadmin.Master" />
+    <Content Include="Admin\dashbordAdmin.Master" />
+    <Content Include="Admin\assets\fonts\dripicons-v2-1.eot" />
+    <Content Include="Admin\assets\fonts\dripicons-v2.eot" />
+    <Content Include="Admin\assets\fonts\dripicons-v2.ttf" />
+    <Content Include="Admin\assets\fonts\dripicons-v2.woff" />
+    <Content Include="Admin\assets\fonts\materialdesignicons-webfont-1.eot" />
+    <Content Include="Admin\assets\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Admin\assets\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Admin\assets\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Admin\assets\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Admin\assets\fonts\Nunito-Bold-1.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-Bold.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-Bold.ttf" />
+    <Content Include="Admin\assets\fonts\Nunito-Bold.woff" />
+    <Content Include="Admin\assets\fonts\Nunito-Light-1.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-Light.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-Light.ttf" />
+    <Content Include="Admin\assets\fonts\Nunito-Light.woff" />
+    <Content Include="Admin\assets\fonts\Nunito-Regular-1.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-Regular.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-Regular.ttf" />
+    <Content Include="Admin\assets\fonts\Nunito-Regular.woff" />
+    <Content Include="Admin\assets\fonts\Nunito-SemiBold-1.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-SemiBold.eot" />
+    <Content Include="Admin\assets\fonts\Nunito-SemiBold.ttf" />
+    <Content Include="Admin\assets\fonts\Nunito-SemiBold.woff" />
+    <Content Include="Admin\assets\fonts\unicons.eot" />
+    <Content Include="Admin\assets\fonts\unicons.ttf" />
+    <Content Include="Admin\assets\fonts\unicons.woff" />
+    <Content Include="Admin\assets\fonts\unicons.woff2" />
+    <Content Include="EmployeeDashboard.Master" />
+    <Content Include="AfterLoginEmployeeMasterPage.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Product\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58936</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44368/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
